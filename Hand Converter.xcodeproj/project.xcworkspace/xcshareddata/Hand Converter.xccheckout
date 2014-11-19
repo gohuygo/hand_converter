@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5A6D34E7-71C1-45B7-ABDA-805B74F4AF09</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hand Converter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D86E7FAD6E770165EAB7F9D7D57638A690907A5A</key>
+		<string>github.com:gohuygo/hand_converter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hand Converter.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D86E7FAD6E770165EAB7F9D7D57638A690907A5A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:gohuygo/hand_converter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D86E7FAD6E770165EAB7F9D7D57638A690907A5A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D86E7FAD6E770165EAB7F9D7D57638A690907A5A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hand_converter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
