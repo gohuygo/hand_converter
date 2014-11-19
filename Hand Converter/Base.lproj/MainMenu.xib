@@ -702,9 +702,6 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
-                        <connections>
-                            <action selector="takeFileNameForInput:" target="Voe-Tx-rLC" id="yWi-wW-kwU"/>
-                        </connections>
                     </textField>
                 </subviews>
             </view>

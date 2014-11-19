@@ -11,7 +11,6 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (weak) IBOutlet NSTextField *inputTextField;
-- (IBAction)takeFileNameForInput:(id)sender;
 - (IBAction)fileSelect:(id)sender;
 
 @end

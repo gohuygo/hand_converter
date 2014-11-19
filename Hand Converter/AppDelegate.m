@@ -41,20 +41,11 @@
         {
             NSString* fileName = [files objectAtIndex:i];
             NSLog(@"received fileSelect");
+            [_inputTextField setStringValue: fileName];
             // Do something with the filename.
         }
     }
     
-}
-
-- (IBAction)takeFileNameForInput:(id)sender {
-    NSString *senderName = nil;
-    if (sender == self.inputTextField){
-        senderName = @"inputTextField";
-    } else {
-        senderName = @"importFileButton";
-    }
-    NSLog(@"%@ sent takeFileNameForInput with value %@", senderName, [sender stringValue]);
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
