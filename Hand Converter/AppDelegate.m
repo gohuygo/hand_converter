@@ -2,7 +2,6 @@
 //  AppDelegate.m
 //  Hand Converter
 //
-//  Created by Huy Nguyen on 11/18/14.
 //  Copyright (c) 2014 FirePoker. All rights reserved.
 //
 
@@ -20,13 +19,12 @@
 
 //Tap on the File input
 - (IBAction)fileSelect:(id)sender {
-    
+    NSLog(@"fileSelect");
     // Create the File Open Dialog class.
     NSOpenPanel* openDlg = [NSOpenPanel openPanel];
-    
+
     // Enable the selection of files in the dialog.
     [openDlg setCanChooseFiles:YES];
-    
     // Enable the selection of directories in the dialog.
     // [openDlg setCanChooseDirectories:YES];
     
@@ -35,17 +33,25 @@
     if ( [openDlg runModal] == NSOKButton ) {
         // Get an array containing the full filenames of all
         // files and directories selected.
-        NSArray* files = [openDlg URLs];
+        
         // Loop through all the files and process them.
-        for(int i = 0; i < [files count]; i++ )
+        for( NSURL* URL in [openDlg URLs] )
         {
-            NSString* fileName = [files objectAtIndex:i];
-            NSLog(@"received fileSelect");
-            [_inputTextField setStringValue: fileName];
-            // Do something with the filename.
+            //NSString* fileName = [files objectAtIndex:i];
+            [_inputTextField setStringValue: [URL path]];
         }
     }
-    
+}
+
+- (IBAction)convert:(id)sender {
+    NSString *inputFilePath =[_inputTextField stringValue];
+   // NSLog(inputFilePath);
+
+    NSFileHandle *inputFileHandle = [NSFileHandle fileHandleForReadingAtPath:inputFilePath];
+    NSAssert( inputFileHandle != nil, @"Failed to open handle for input file" );
+    NSData *sampleEOF = [inputFileHandle readDataToEndOfFile];
+    NSLog(@"%@", sampleEOF);
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

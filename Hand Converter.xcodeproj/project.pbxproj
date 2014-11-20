@@ -398,6 +398,7 @@
 				0040C6CB1A1C4E95000735D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0040C6CC1A1C4E95000735D9 /* Build configuration list for PBXNativeTarget "Hand ConverterTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +407,7 @@
 				0040C6CE1A1C4E95000735D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
