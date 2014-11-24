@@ -25,17 +25,10 @@
 
     // Enable the selection of files in the dialog.
     [openDlg setCanChooseFiles:YES];
-    // Enable the selection of directories in the dialog.
-    // [openDlg setCanChooseDirectories:YES];
-    
-    // Display the dialog.  If the OK button was pressed,
-    // process the files.
+
     if ( [openDlg runModal] == NSOKButton ) {
-        // Get an array containing the full filenames of all
-        // files and directories selected.
-        
-        // Loop through all the files and process them.
-        for( NSURL* URL in [openDlg URLs] )
+
+        for( NSURL *URL in [openDlg URLs] )
         {
             //NSString* fileName = [files objectAtIndex:i];
             [_inputTextField setStringValue: [URL path]];
@@ -44,13 +37,19 @@
 }
 
 - (IBAction)convert:(id)sender {
-    NSString *inputFilePath =[_inputTextField stringValue];
-   // NSLog(inputFilePath);
+    NSString* inputFilePath =[_inputTextField stringValue];
 
     NSFileHandle *inputFileHandle = [NSFileHandle fileHandleForReadingAtPath:inputFilePath];
     NSAssert( inputFileHandle != nil, @"Failed to open handle for input file" );
-    NSData *sampleEOF = [inputFileHandle readDataToEndOfFile];
-    NSLog(@"%@", sampleEOF);
+   
+    NSData *buffer = [inputFileHandle readDataOfLength:1024];
+    while ([buffer length] > 0) {
+        NSAssert( buffer != nil, @"Buffer is nil" );
+        NSString *dataString = [[NSString alloc] initWithData:buffer
+                                                      encoding:NSUTF8StringEncoding];
+        NSLog(@"%@", dataString);
+
+    }
 
 }
 
