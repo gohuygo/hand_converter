@@ -12,6 +12,8 @@
 		0040C6B71A1C4E95000735D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0040C6B61A1C4E95000735D9 /* Images.xcassets */; };
 		0040C6BA1A1C4E95000735D9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0040C6B81A1C4E95000735D9 /* MainMenu.xib */; };
 		0040C6C61A1C4E95000735D9 /* Hand_ConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0040C6C51A1C4E95000735D9 /* Hand_ConverterTests.m */; };
+		006DC6901A232BBB00589C34 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 006DC68F1A232BBB00589C34 /* DDFileReader.m */; };
+		006DC6951A24545800589C34 /* HNParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 006DC6941A24545800589C34 /* HNParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,10 @@
 		0040C6BF1A1C4E95000735D9 /* Hand ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hand ConverterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0040C6C41A1C4E95000735D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0040C6C51A1C4E95000735D9 /* Hand_ConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hand_ConverterTests.m; sourceTree = "<group>"; };
+		006DC68F1A232BBB00589C34 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileReader.m; sourceTree = "<group>"; };
+		006DC6931A24544500589C34 /* HNParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNParser.h; sourceTree = "<group>"; };
+		006DC6941A24545800589C34 /* HNParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNParser.m; sourceTree = "<group>"; };
+		00BA87731A232A610079F8BB /* DDFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileReader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +82,15 @@
 		0040C6AE1A1C4E95000735D9 /* Hand Converter */ = {
 			isa = PBXGroup;
 			children = (
+				006DC68F1A232BBB00589C34 /* DDFileReader.m */,
 				0040C6B11A1C4E95000735D9 /* AppDelegate.h */,
 				0040C6B21A1C4E95000735D9 /* AppDelegate.m */,
 				0040C6B61A1C4E95000735D9 /* Images.xcassets */,
 				0040C6B81A1C4E95000735D9 /* MainMenu.xib */,
 				0040C6AF1A1C4E95000735D9 /* Supporting Files */,
+				00BA87731A232A610079F8BB /* DDFileReader.h */,
+				006DC6931A24544500589C34 /* HNParser.h */,
+				006DC6941A24545800589C34 /* HNParser.m */,
 			);
 			path = "Hand Converter";
 			sourceTree = "<group>";
@@ -210,7 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006DC6951A24545800589C34 /* HNParser.m in Sources */,
 				0040C6B51A1C4E95000735D9 /* main.m in Sources */,
+				006DC6901A232BBB00589C34 /* DDFileReader.m in Sources */,
 				0040C6B31A1C4E95000735D9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
