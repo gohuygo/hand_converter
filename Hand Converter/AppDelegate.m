@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DDFileReader.h"
 
 @interface AppDelegate ()
 @property (weak) IBOutlet NSWindow *window;
@@ -38,19 +39,22 @@
 
 - (IBAction)convert:(id)sender {
     NSString* inputFilePath =[_inputTextField stringValue];
-
-    NSFileHandle *inputFileHandle = [NSFileHandle fileHandleForReadingAtPath:inputFilePath];
-    NSAssert( inputFileHandle != nil, @"Failed to open handle for input file" );
-   
-    NSData *buffer = [inputFileHandle readDataOfLength:1024];
-    while ([buffer length] > 0) {
-        NSAssert( buffer != nil, @"Buffer is nil" );
-        NSString *dataString = [[NSString alloc] initWithData:buffer
-                                                      encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", dataString);
-
-    }
-
+    DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:inputFilePath];
+    NSLog(@"WTF");
+    [reader enumerateLinesUsingBlock:^(NSString * line, BOOL * stop) {
+        NSLog(@"read line: %@", line);
+    }];
+//
+//    NSFileHandle *inputFileHandle = [NSFileHandle fileHandleForReadingAtPath:inputFilePath];
+//    NSAssert( inputFileHandle != nil, @"Failed to open handle for input file" );
+//   
+//    NSData *buffer = [inputFileHandle readDataOfLength:9999];
+//    while ([buffer length] > 0) {
+//        NSAssert( buffer != nil, @"Buffer is nil" );
+//        NSString *dataString = [[NSString alloc] initWithData:buffer
+//                                                      encoding:NSUTF8StringEncoding];
+//        NSLog(@"%@", dataString);
+//    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
